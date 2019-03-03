@@ -1,0 +1,105 @@
+<Gerenciador>:
+    TelaLogin:
+        name: 'telalogin'
+    Tabelas:
+        name: 'tabelas'
+
+<TelaLogin>:
+    BoxLayout:
+        spacing: 20
+        orientation: "vertical"
+        Image:
+            source:"imagem.png"
+        Login:
+        Senha:
+        BotaoConfirma:
+            color:.2627,.4235,.6117,1
+            text: "Continuar"
+            font_name: "Roboto-Thin"
+            font_size:55
+            on_release: app.root.current= 'tabelas'
+<Login>:
+    BoxLayout:
+        Label:
+            size_hint_x: .2
+        Label:
+            size_hint_y:None
+            size_hint_x: .5
+
+            height:55
+            font_size:50
+            text:"Login:"
+            font_name: "Roboto-Thin"
+            color:.2627, .4235, .6117, 1
+
+        BoxLayout:
+            orientation: "vertical"
+            EntradaDeTexto:
+                size_hint_y:None
+                height:52
+                multiline:False
+                pos:self.x, self.y
+                font_name: "Roboto-Thin"
+        Label:
+            size_hint_x: .1
+
+
+<Senha>:
+    BoxLayout:
+        orientation: "vertical"
+        BoxLayout:
+            size_hint_y:.2
+            Label:
+                size_hint_x: .2
+            Label:
+                size_hint_y:None
+                size_hint_x: .5
+                height:55
+                font_size:50
+                text:"Senha:"
+                font_name: "Roboto-Thin"
+                color:.2627, .4235, .6117, 1
+
+            BoxLayout:
+                orientation: "vertical"
+                EntradaDeTexto:
+                    size_hint_y:None
+                    height:52
+                    multiline:False
+                    pos:self.x, self.y
+                    font_name: "Roboto-Thin"
+            Label:
+                size_hint_x: .1
+
+
+
+        Label:
+            size_hint_y: .8
+
+
+
+
+<Tabelas>:
+    BoxLayout:
+        orientation: "vertical"
+        BoxLayout:
+            Label:
+            Button:
+                size_hint:None,None
+                background_normal: 'imagem.png'
+                background_down: 'imagem.png'
+                border: 0, 0, 0, 0
+                on_release:app.root.current='telalogin'
+                on_release:root.manager.transition.direction = 'left'
+            Label:
+        Label:
+            size_hint_y:.8
+        Label:
+        Label:
+ 
+
+
+
+
+
+
